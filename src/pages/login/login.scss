@@ -1,0 +1,41 @@
+.login-container {
+  // width: 400px;
+  display: flex;
+  justify-content: center;
+  .login-content {
+    width: 500px;
+    .ant-form-item-required {
+      margin-top: 15px;
+      &::before {
+        position: absolute;
+        right: -14px;
+      }
+    }
+    .ant-form-item {
+      //   margin-bottom: 0px;
+      margin: 5px 0px;
+    }
+    .ant-btn {
+      margin-top: 15px;
+      width: 100%;
+      padding: 10px 14px;
+      height: auto;
+    }
+    .ant-input {
+      padding: 4px 12px;
+    }
+    .ant-form-item-explain-error {
+      margin-top: 3px;
+      font-size: 12px;
+    }
+    .ant-checkbox-wrapper {
+      color: #656565;
+    }
+  }
+}
+
+// @media only screen and (min-width: 768px) {
+//     .login-container {
+//         max-width: 400px;
+//     }
+// }
