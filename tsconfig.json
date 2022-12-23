@@ -27,7 +27,8 @@
       "@routes/*": ["src/routes/*"],
       "@theme/*": ["src/theme/*"],
       "@service/*": ["src/services/*"],
-      "@configs/*": ["src/configs/*"]
+      "@configs/*": ["src/configs/*"],
+      "@assets/*": ["src/assets/*"]
     }
   },
 

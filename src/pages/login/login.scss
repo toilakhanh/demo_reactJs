@@ -1,18 +1,75 @@
+@import "../../styles/styles.scss";
+
 .login-container {
   // width: 400px;
   display: flex;
   justify-content: center;
   .login-content {
-    width: 500px;
+    width: 440px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+    .btn-signUpMobile {
+      display: none;
+    }
+    .text-unSignUp-mobile {
+      display: none;
+    }
+    .img-logo {
+      display: none;
+    }
+    .btn-goToHome {
+      display: none;
+    }
+    .btn-signUp {
+      border-color: $primaryColor;
+      color: $primaryColor;
+      font-weight: bold;
+      border-width: 1.5px;
+    }
+    .text-unSignUp {
+      text-align: center;
+      margin: 24px 0;
+      display: flex;
+      align-items: center;
+      white-space: nowrap;
+      color: #656565;
+      &::after {
+        content: "";
+        background-color: #656565;
+        height: 1px;
+        width: 100%;
+        margin-left: 1rem;
+      }
+      &::before {
+        content: "";
+        background-color: #656565;
+        height: 1px;
+        width: 100%;
+        margin-right: 1rem;
+      }
+    }
+    .reset-password {
+      text-align: center;
+      margin-top: 12px;
+    }
+    .ant-checkbox-inner {
+      border-radius: 2px;
+    }
+    .input {
+      padding: 8px 12px;
+      // font-size: 16px;
+      border-radius: 8px;
+    }
     .ant-form-item-required {
       margin-top: 15px;
+      font-weight: bold;
       &::before {
         position: absolute;
         right: -14px;
       }
     }
     .ant-form-item {
-      //   margin-bottom: 0px;
       margin: 5px 0px;
     }
     .ant-btn {
@@ -20,9 +77,7 @@
       width: 100%;
       padding: 10px 14px;
       height: auto;
-    }
-    .ant-input {
-      padding: 4px 12px;
+      border-radius: 8px;
     }
     .ant-form-item-explain-error {
       margin-top: 3px;
@@ -34,8 +89,37 @@
   }
 }
 
-// @media only screen and (min-width: 768px) {
-//     .login-container {
-//         max-width: 400px;
-//     }
-// }
+@media only screen and (max-width: 767px) {
+  .login-container {
+    .login-content {
+      width: 94%;
+      .img-logo {
+        width: 200px;
+        align-self: center;
+        display: block;
+        margin: 30px 0px;
+      }
+      .text-unSignUp {
+        display: none;
+      }
+      .btn-signUp {
+        display: none;
+      }
+      .text-unSignUp-mobile {
+        display: block;
+        text-align: center;
+        color: #656565;
+        margin-top: 24px;
+      }
+      .btn-goToHome {
+        display: block;
+        margin-top: 0;
+      }
+      .btn-signUpMobile {
+        display: block;
+        align-self: center;
+        margin-top: 14px;
+      }
+    }
+  }
+}

@@ -6,15 +6,22 @@ import {
   useLocation,
   useNavigate,
 } from "react-router-dom";
+import MobileLayout from "../components/layouts/mobile";
+import { PATH_NAME } from "../configs";
 import { MRoute } from "../models/model";
+import forgotPassword from "../pages/forgot-password";
 
-import Demo from "../pages/demo/demo";
 import login from "../pages/login";
 
 const routesList: MRoute[] = [
   {
-    path: "/",
+    path: PATH_NAME.ROOT,
     component: login,
+  },
+  {
+    path: PATH_NAME.FORGOT_PASSWORD,
+    component: forgotPassword,
+    layout: MobileLayout,
   },
 ];
 
@@ -24,6 +31,7 @@ const renderRoutes = () => {
       <Routes>
         {routesList.map((route: MRoute, idx: number) => {
           const Guard = route.guard || Fragment;
+          const Layout = route.layout || Fragment;
           const Component = route.component;
           return (
             <Route
@@ -31,7 +39,9 @@ const renderRoutes = () => {
               path={route.path || ""}
               element={
                 <Guard>
-                  <Component />
+                  <Layout>
+                    <Component />
+                  </Layout>
                 </Guard>
               }
             />

@@ -1,0 +1,26 @@
+@import "src/styles/styles.scss";
+
+.header-mobile-container {
+  width: 100%;
+  height: 60px;
+  background-color: $primaryColor;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .icon-back {
+    height: 30px;
+    width: auto;
+  }
+  .btn-back {
+    position: absolute;
+    left: 0;
+    height: 60px;
+    width: 60px;
+  }
+  .header-title {
+    margin: 0;
+    font-weight: bold;
+    color: $whiteColor;
+    font-size: 16px;
+  }
+}

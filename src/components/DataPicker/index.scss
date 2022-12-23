@@ -1,0 +1,15 @@
+.date-picker-container {
+  display: flex;
+  justify-content: space-between;
+  //   .ant-form-item-control {
+  //     justify-content: space-around;
+  //   }
+  .select-date {
+    width: 30%;
+    .ant-select-selector {
+      padding: 4px 12px;
+      height: auto;
+      border-radius: 8px;
+    }
+  }
+}
