@@ -4,16 +4,14 @@ import DatePicker from "../../components/DataPicker";
 import "./forgot-password.scss";
 
 const ForgotPasswordScreen: React.FC = () => {
+  const [form] = Form.useForm();
+
   const onFinish = (values: any) => {
     console.log("Success:", values);
   };
 
   const onFinishFailed = (errorInfo: any) => {
     console.log("Failed:", errorInfo);
-  };
-
-  const handleChange = (value: string) => {
-    console.log(`selected ${value}`);
   };
 
   return (
@@ -26,6 +24,7 @@ const ForgotPasswordScreen: React.FC = () => {
           onFinishFailed={onFinishFailed}
           autoComplete="off"
           layout="vertical"
+          form={form}
         >
           <Form.Item
             label="メールアドレス"
@@ -40,12 +39,14 @@ const ForgotPasswordScreen: React.FC = () => {
           >
             <Input className="input" />
           </Form.Item>
-          <DatePicker />
-
+          <DatePicker form={form} name={"dataOfBirth"} />
           <Form.Item>
-            <Button type="primary" htmlType="submit">
-              ログイン
-            </Button>
+            <div className="group-btn">
+              <Button>ログイン</Button>
+              <Button type="primary" htmlType="submit">
+                ログイン
+              </Button>
+            </div>
           </Form.Item>
         </Form>
       </div>
