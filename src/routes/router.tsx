@@ -12,11 +12,12 @@ import { MRoute } from "../models/model";
 import forgotPassword from "../pages/forgot-password";
 
 import login from "../pages/login";
+import homeScreen from "../pages/home-page";
 
 const routesList: MRoute[] = [
   {
     path: PATH_NAME.ROOT,
-    component: login,
+    component: homeScreen,
   },
   {
     path: PATH_NAME.FORGOT_PASSWORD,
